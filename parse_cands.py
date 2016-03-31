@@ -16,8 +16,6 @@ with open(file) as pkl:
   state = pickle.load(pkl)
   cands = pickle.load(pkl)
 
-# print statec
-print state
 fileroot = state['fileroot']
 obs = fileroot.split('_')[0]
 print obs
@@ -53,6 +51,6 @@ for key in cands:
 jsonStr = json.dumps(alldata,separators=(',', ':'))
 cleanjson = jsonStr.replace('}},','}}\n').replace('},','}\n').replace(']','').replace('[','')
 # print cleanjson
-url = 'http://localhost:9200/veryfast/cands/_bulk?'
+url = 'http://localhost:9200/cand/candidate/_bulk?'
 r = requests.post(url, data=cleanjson)
 print r

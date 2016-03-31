@@ -18,12 +18,8 @@ http.cors.allow-headers : X-Requested-With,X-Auth-Token,Content-Type, Content-Le
 ###### Start ES from bin directory (using version 2.1.1)
 ```
 ./elasticsearch --cluster.name my_cluster_name --node.name my_node_name
-```
 
-#### Custom setup for RF ElasticSearch
-
-###### Start ES in bin directory
-```
+// Custom setup for RF ElasticSearch
 ./elasticsearch --cluster.name realfast --node.name candidate_data
 ```
 

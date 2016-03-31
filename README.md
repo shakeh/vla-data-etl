@@ -2,7 +2,22 @@
 
 This documentaion describes how to Extract, transform, and load candidate files for VLA.
 
-Here we are assuming that the backend is using Elasticsearch.
+Here we are assuming that the backend is using Elasticsearch. Follow ** ES Setup Instuctions ** below.
+
+#### How to install and run code
+1. Clone git repository in a directory 
+```
+git clone https://github.com/shakeh/vla-data-etl.git
+```
+2. Once you have Elasticserach setup with proper indexes, you can run the python code to parse candidate pickle files. You will need to call your own filename after '-f'
+```
+python parse_cands.py  -f *filename*
+
+python parse_cands.py  -f cands_14A-425_14sep03_stats_merge.pkl
+```
+
+#### ES Setup Instuctions
+
 After following the instruction found on ES site, continue with the following setup guide:
 https://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.html
 

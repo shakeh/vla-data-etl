@@ -34,7 +34,7 @@ python parse_cands.py  -f cands_14A-425_14sep03_stats_merge.pkl
 http://localhost:9200/cand/_search?q=*&pretty - display everything in index
 ```
 
-##### General Info
+#### General Info
 
 ###### Command
 ```

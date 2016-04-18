@@ -2,7 +2,6 @@ import argparse
 import pickle
 import json
 import requests
-from datetime import datetime, timedelta
 
 parser = argparse.ArgumentParser(description='Extract, transform and load veryfast candidate data.')
 parser.add_argument('-f', '--filename', type=str, dest='filename', required=True, help='candidate filename in pickle format')
@@ -20,15 +19,10 @@ fileroot = state['fileroot']
 obs = fileroot.split('_')[0]
 print obs
 
-# Generate dumy dates
 alldata = []
-time = datetime.now()
-date = time;
 for key in cands:
   data = {}
-  date = date + timedelta(hours=1)
   data['obs'] = obs
-  data['@timestamp'] = date.isoformat()+'Z'
   data['scan'] = key[0]
   data['segment'] = key[1]
   data['integration'] = key[2]
